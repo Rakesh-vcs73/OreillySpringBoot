@@ -15,3 +15,6 @@ Same  functionality as Project 3, implemented using Reactive WebClient instead o
 
 ## Project 5
 Get Employee details from a dummy API using Reactive webclient
+
+## Project 6
+Persistence API using JDBC Template to perform CRUD operations.
