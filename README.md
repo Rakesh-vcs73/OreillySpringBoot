@@ -21,3 +21,6 @@ Persistence API using JDBC Template to perform CRUD operations with unit tests.
 
 ## Project 7
 Same functionality as project 6 with tests, but implemented using Spring Data JPA.
+
+## Project 8
+API to fetch latitude and longitude of requested location using nominatim API(Alternate to geocoding)
