@@ -17,4 +17,7 @@ Same  functionality as Project 3, implemented using Reactive WebClient instead o
 Get Employee details from a dummy API using Reactive webclient
 
 ## Project 6
-Persistence API using JDBC Template to perform CRUD operations.
+Persistence API using JDBC Template to perform CRUD operations with unit tests.
+
+## Project 7
+Same functionality as project 6 with tests, but implemented using Spring Data JPA.
