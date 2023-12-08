@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
@@ -87,7 +88,7 @@ public class OfficerRepoImpl implements OfficerRepo{
 	}
 
 	@Override
-	public Long count() {
+	public long count() {
 		return jdbcTemplate.queryForObject("SELECT COUNT(*) FROM OFFICERS", Long.class);
 	}
 
@@ -97,11 +98,12 @@ public class OfficerRepoImpl implements OfficerRepo{
 	}
 
 	@Override
-	public Boolean existsById(Integer id) {
-		return jdbcTemplate.queryForObject("SELECT 1 FROM OFFICERS WHERE ID=?", Boolean.class, id);
+	public boolean existsById(Integer id) {
+		try {
+	        return jdbcTemplate.queryForObject("SELECT 1 FROM OFFICERS WHERE ID=?", Boolean.class, id);
+	    } catch (EmptyResultDataAccessException e) {
+	        return false;
+	    }
 	}
 	
-	
-	
-
 }

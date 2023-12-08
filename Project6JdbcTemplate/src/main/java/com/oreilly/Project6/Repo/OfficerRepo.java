@@ -11,11 +11,11 @@ public interface OfficerRepo {
 	Optional<Officer> findById(Integer id);
 	List<Officer> findAll();
 	
-	Long count();
+	long count();
 	
 	void delete(Integer id);
 	
-	Boolean existsById(Integer id);
+	boolean existsById(Integer id);
 	
 
 }
