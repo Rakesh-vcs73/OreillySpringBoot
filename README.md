@@ -26,6 +26,6 @@ Same functionality as project 6 with tests, but implemented using Spring Data JP
 API to fetch latitude and longitude of requested location using nominatim API(Alternate to geocoding)
 
 ## Project 9 
-# Final Project
+### Final Project
 Geo Location API, which fetches Latitude and longitude of searched place and points on the map.
 Note: Used Nominatim API, as an alternative for Geocoding API.
