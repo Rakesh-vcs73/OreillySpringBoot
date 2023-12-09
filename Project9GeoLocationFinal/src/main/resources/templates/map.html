@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script type="text/javascript"></script>
+
+<meta charset="UTF-8">
+<title>Sites</title>
+</head>
+
+<body>
+	<h1>Sites</h1>
+	<button id="myButton" class="float-left submit-button" >Home</button>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "/Home";
+    };
+</script>
+	
+	
+
+
+	<iframe height=1000 width=100% th:src="${urll}"></iframe>
+
+	<!-- 
+	<iframe height=1000 width=100% th:src="@{urll}"></iframe>
+	
+		<div class="gmap_canvas">
+			<iframe width="600" height="500" id="gmap_canvas"
+				src="https://nominatim.openstreetmap.org/ui/search.html?q=bangalore" frameborder="0" scrolling="no"
+				marginheight="0" marginwidth="0"></iframe>
+		</div>
+		-->
+</body>
+
+</html>
