@@ -1,19 +1,28 @@
 package com.oreilly.Project8.Service;
 
 import java.time.Duration;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.oreilly.Project8.Model.Location;
+import com.oreilly.Project8.Repository.LocationRepo;
 
 import reactor.core.publisher.Mono;
 
 //using nominatim api as an alternative for geocoading API as it requires API key
 
 @Service
+@Transactional
 public class GeoService {
+	
+	@Autowired
+	public LocationRepo locationRepo;
+	
 	
 	private final WebClient webClient;
 
@@ -44,6 +53,17 @@ public class GeoService {
 //        List<Location> block = this.webClient.get().uri(builder.build().toUri()).retrieve().bodyToMono(List.class).block(Duration.ofSeconds(10));
 //		return block;
 //    }
+    
+    
+    //Service to persistance laver
+    public Location saveLocationToDb(String searchLocation) {
+    	Location[] location = getLocation(searchLocation);
+    	return locationRepo.save(location[0]);
+    }
+    
+    public List<Location> getSavedLocationsService(){
+		return locationRepo.findAll();
+	}
     
     
     

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.oreilly.Project8.Model.Location;
@@ -14,7 +15,7 @@ import com.oreilly.Project8.Service.GeoService;
 public class GetLocationController {
 
 	@Autowired
-	private GeoService geoService;
+	public GeoService geoService;
 	
 	@GetMapping("/getLocation/{loc}")
 	public Location[] getLocation(@PathVariable("loc") String searchLocation) {
@@ -23,4 +24,15 @@ public class GetLocationController {
 		return location;
 		
 	}
+	
+	@PostMapping("/saveLocation/{loc}")
+	public Location saveLocation(@PathVariable("loc") String searchLocation) {
+		return geoService.saveLocationToDb(searchLocation);
+	}
+	
+	@GetMapping("/getSavedLocations")
+	public List<Location> getSavedLocations(){
+		return geoService.getSavedLocationsService();
+	}
+	
 }

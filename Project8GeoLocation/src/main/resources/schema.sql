@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS locations;
+
+CREATE TABLE locations
+(
+place_id INT NOT NULL AUTO_INCREMENT,
+lat VARCHAR(20) NOT NULL,
+lon VARCHAR(20) NOT NULL,
+display_name VARCHAR(255) NOT NULL,
+PRIMARY KEY(place_id)
+);
+
+
