@@ -7,33 +7,41 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <form action="getMaps">
+    <div class="bg-image">
+    <div class="index-function">
+    <nav class="navbar navbar-light bg-light justify-content-between" id="nav-bar">
+        <a class="navbar-brand" id="nav-title">Geo Location</a>
+        <form class="form-inline" id="form-elements" action="getMaps">
+          <input class="form-control mr-sm-2" id="search-box" type="text" placeholder="Enter the location" name ="locationString">
+          <input class="btn btn-outline-success my-2 my-sm-0" id="search-button" type="submit" value="Search"></input>
+        </form>
+    </nav>
+</div>
 
-        <input type="text" name ="locationString">
-        <input type="submit">
-
-    </form>
+<div class = "data-elements">
     
     <h2> You searched : </h2>
     
-    <table class="table table-hover table-striped">
+    <table class="table" id="table-body">
 	<thead>
     <tr>
-      <th scope="col">Place</th>
       <th scope="col">Latitude</th>
       <th scope="col">Longitude</th>
+      <th scope="col">Place</th>
     </tr>
   </thead>
   <tbody>
 			<tr th:each="loc : ${locList}">
-				<td th:text="${loc.getDisplay_name()}"></td>
 				<td th:text="${loc.getLat()}"></td>
 				<td th:text="${loc.getLon()}"></td>
+				<td th:text="${loc.getDisplay_name()}"></td>
 			</tr>
 		</tbody>
 </table>
-    
+</div>
+</div>
 </body>
 </html>

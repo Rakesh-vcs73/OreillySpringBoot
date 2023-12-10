@@ -1,0 +1,43 @@
+
+#nav-bar{
+    display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#nav-title{
+    margin-top: 90px;
+  font-size: 70pt;
+  font-family: initial;
+  color: green;
+}
+
+#form-elements{
+    margin-top: 200px;
+  position: absolute;
+  left: 639px;
+  color: black;
+}
+
+#search-box{
+	background-color: unset;
+	
+}
+    
+#search-button{
+	background-color: #028fe36e;
+	
+}
+
+.data-elements{
+    margin-top: 125px;
+  margin-left: 200px;
+  margin-right: 186px;
+}
+    
+
+.bg-image{
+    background-image: url('MapBackground.jpg');
+    padding-bottom: 500px;
+    color: blanchedalmond;
+}

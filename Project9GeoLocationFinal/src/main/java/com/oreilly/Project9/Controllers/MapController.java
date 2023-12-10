@@ -50,7 +50,7 @@ public class MapController {
 		String urll = mapService.getURL(location.getLat(), location.getLon());
 		model.addAttribute("urll", urll);
 		List<Location> locations = geoService.getSavedLocationsService();
-		locations.forEach(System.out::println);
+		//locations.forEach(System.out::println);
 		model.addAttribute("locList",locations);
 		return "map";
 	}
@@ -58,7 +58,7 @@ public class MapController {
 	@GetMapping("/Home")
 	public String searchHistory(Model model){
 		List<Location> locations = geoService.getSavedLocationsService();
-		locations.forEach(System.out::println);
+		//locations.forEach(System.out::println);
 		model.addAttribute("locList",locations);
 		return "Search";
 		

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html  xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
@@ -7,13 +6,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <form action="getMaps">
-
-        <input type="text" name ="locationString">
-        <input type="submit">
-
-    </form>
+    <div class="bg-image">
+    <nav class="navbar navbar-light bg-light justify-content-between" id="nav-bar">
+        <a class="navbar-brand" id="nav-title">Geo Location</a>
+        <form class="form-inline" id="form-elements" action="getMaps">
+          <input class="form-control mr-sm-2" type="text" placeholder="Enter the location" name ="locationString">
+          <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search"></input>
+        </form>
+    </nav>
+    </div>
 </body>
 </html>
