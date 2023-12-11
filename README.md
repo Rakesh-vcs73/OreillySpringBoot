@@ -32,3 +32,5 @@ Note: Used Nominatim API, as an alternative for Geocoding API.
 Outupt Screenshot
 
 <img src="Project9GeoLocationFinal/Output/Output.png" width="1000">
+
+<img src="Project9GeoLocationFinal/Output/MapsOutput.png" width="1000">
