@@ -25,8 +25,14 @@
 }
     
 #search-button{
-	background-color: #028fe36e;
+	background-color: #53e3026e;;
 	
+}
+
+#myButton {
+  background-color: #02cee33d;
+  margin-top: -97px;
+  margin-left: 160px;
 }
 
 .data-elements{
@@ -40,4 +46,9 @@
     background-image: url('MapBackground.jpg');
     padding-bottom: 500px;
     color: blanchedalmond;
+}
+
+.table-body{
+  color: black;
+  background-color: white;
 }

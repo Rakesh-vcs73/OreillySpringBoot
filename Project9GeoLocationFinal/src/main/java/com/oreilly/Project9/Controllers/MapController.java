@@ -36,6 +36,7 @@ public class MapController {
 //		        .toURL();
 //		System.out.println(myUrl);
 		model.addAttribute("urll", urll);
+		model.addAttribute("Location",searchLocation);
 		//model.addAttribute("urll","https://nominatim.openstreetmap.org/ui/search.html?q=12.9767936,77.590082");
 //		model.addAttribute("url1", "");
 //		model.addAttribute("url2",location[0].getLat()+','+location[0].getLon());
@@ -49,6 +50,7 @@ public class MapController {
 		//System.out.println(location);
 		String urll = mapService.getURL(location.getLat(), location.getLon());
 		model.addAttribute("urll", urll);
+		model.addAttribute("Location",loc);
 		List<Location> locations = geoService.getSavedLocationsService();
 		//locations.forEach(System.out::println);
 		model.addAttribute("locList",locations);

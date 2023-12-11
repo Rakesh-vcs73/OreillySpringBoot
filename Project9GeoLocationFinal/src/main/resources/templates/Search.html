@@ -33,7 +33,7 @@
       <th scope="col">Place</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="table-body">
 			<tr th:each="loc : ${locList}">
 				<td th:text="${loc.getLat()}"></td>
 				<td th:text="${loc.getLon()}"></td>
