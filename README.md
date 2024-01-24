@@ -29,8 +29,11 @@ API to fetch latitude and longitude of requested location using nominatim API(Al
 ### Final Project
 Geo Location API, which fetches Latitude and longitude of searched place and points on the map.
 Note: Used Nominatim API, as an alternative for Geocoding API.
-Outupt Screenshot
+Output Screenshot
 
 <img src="Project9GeoLocationFinal/Output/Output.png" width="1000">
 
 <img src="Project9GeoLocationFinal/Output/MapsOutput.png" width="1000">
+
+## Project 10
+REST API for Expense Management - In progress . . .
